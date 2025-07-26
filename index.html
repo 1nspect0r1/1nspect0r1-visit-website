@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Антон Бондаренко | Разработчик</title>
+    <meta name="description" content="Персональное портфолио разработчика Антона Бондаренко">
+    <meta name="keywords" content="портфолио, разработчик, программист, Антон Бондаренко">
+    <meta name="author" content="Антон Бондаренко">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <!-- Скрипты (defer) -->
+    <script src="js/scroll.js" defer></script>
+</head>
+<body>
+    <!-- Фон из частиц -->
+    <div id="particles-js"></div>
+
+    <!-- Шапка -->
+    <header>
+        <div class="header-content">
+            <div class="avatar-container floating">
+                <img src="assets/avatar.jpg" alt="Антон Бондаренко" width="150" height="150">
+            </div>
+            <h1>Антон Бондаренко</h1>
+            <p class="position">Full-stack разработчик</p>
+            <div class="social-links">
+                <a href="https://github.com/1nspect0r1" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://steamcommunity.com/id/1nspect0r_awaking/" target="_blank" aria-label="Steam" rel="noopener noreferrer">
+                    <i class="fab fa-steam"></i>
+                </a>
+                <a href="https://discord.com/users/reaxentoff" target="_blank" aria-label="Discord" rel="noopener noreferrer">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://vk.com/1nspect0r" target="_blank" aria-label="ВКонтакте" rel="noopener noreferrer">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://t.me/inspectorkkrt" target="_blank" aria-label="Telegram" rel="noopener noreferrer">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <!-- Портфолио -->
+        <section id="portfolio">
+            <h2>Мои проекты</h2>
+            <div class="portfolio">
+                <!-- Карточка 1 - ImgViewer -->
+                <div class="card" tabindex="0" onclick="openModal('imgviewer')">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Просмотр изображений в ImgViewer">
+                        <span class="card-badge">APP</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>ImgViewer</h3>
+                        <p>Оконное приложение для Windows для просмотра изображений с поддержкой всех популярных форматов</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.Net FrameWork</span>
+                            <span class="tech-tag">Windows Forms</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Карточка 2 - OpenSpaceMonitor -->
+                <div class="card" tabindex="0" onclick="openModal('openspacemonitor')">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Мониторинг системы в OpenSpaceMonitor">
+                        <span class="card-badge">Utility</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>OpenSpaceMonitor</h3>
+                        <p>Мониторинг системных ресурсов компьютера и температуры CPU/GPU</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">psutil</span>
+                            <span class="tech-tag">GPUtil</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Карточка 3 - PasswordGenerator -->
+                <div class="card" tabindex="0" onclick="openModal('passwordgenerator')">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1655720828012-58aecec2688f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Генератор паролей">
+                        <span class="card-badge">APP</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>PasswordGenerator</h3>
+                        <p>Генератор сложных паролей с графическим интерфейсом</p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tkinter</span>
+                            <span class="tech-tag">ООП</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- О себе -->
+        <section id="about">
+            <h2>Обо мне</h2>
+            <div class="about">
+                <div class="about-content">
+                    <p class="about-text">
+                        Привет! Я Антон Бондаренко, техник-программист с практическим опытом разработки.  
+                        Хотя мой профессиональный путь только начинается, я уже работал над несколькими проектами, включая:  
+                    </p>
+                    <p class="about-text">
+                        » Локальный корпоративный чат для ОАО «РЖД»,<br>
+                        » ImgViewer – простую программу для просмотра изображений,<br>  
+                        » OpenSpaceMonitor – утилиту для мониторинга нагрузки и температуры CPU/GPU, а также прогноза погоды.<br>  
+                        » Финансовый трекер (в процессе)
+                    </p>
+                    <div class="skills">
+                        <span class="skill"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill"><i class="fab fa-react"></i> React</span>
+                        <span class="skill"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill"><i class="fas fa-database"></i> SQL/NoSQL</span>
+                        <span class="skill"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill"><i class="fas fa-server"></i> DevOps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Контакты -->
+        <section id="contact">
+            <h2>Свяжитесь со мной</h2>
+            <div class="contact">
+                <p>Ищу интересные проекты и возможности для сотрудничества. Буду рад обсудить ваши идеи!</p>
+                <a href="mailto:anton.bondarenko@example.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Написать мне
+                </a>
+            </div>
+        </section>
+    </main>
+
+<!-- Подвал (единственный футер) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                &copy; 2025 Антон Бондаренко. Все права защищены.
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/1nspect0r1" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" onclick="openModal('privacy')" class="footer-link">
+                    <i class="fas fa-shield-alt"></i> Политика конфиденциальности
+                </a>
+                <a href="#" onclick="openModal('terms')" class="footer-link">
+                    <i class="fas fa-file-contract"></i> Условия использования
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div id="imgviewer-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>ImgViewer</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Просмотр изображений в ImgViewer" class="modal-image">
+                <p>ImgViewer - Это приложение, разработанное для Windows, позволяет удобно просматривать изображения в реальном времени с поддержкой широкого спектра графических форматов.</p>
+                <p>Программа работает с большинством популярных графических форматов, включая:</p>
+                <ul>
+                    <li>JPEG/JPG</li>
+                    <li>PNG</li>
+                    <li>BMP</li>
+                    <li>GIF (включая анимацию)</li>
+                    <li>TIFF</li>
+                    <li>SVG</li>
+                    <li>WMF/EMF (метафайлы Windows)</li>
+                </ul>
+                <div class="modal-tech">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">.NetFramework</span>
+                    <span class="tech-tag">Microsoft Windows Forms</span>
+                </div>
+                <div class="modal-links">
+                    <a href="#" class="demo"><i class="fas fa-external-link-alt"></i> Демо</a>
+                    <a href="#" class="code"><i class="fab fa-github"></i> Исходный код</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="openspacemonitor-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>OpenSpaceMonitor</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Мониторинг системы в OpenSpaceMonitor" class="modal-image">
+                <p>OpenSpaceMonitor - это утилита для мониторинга системных ресурсов вашего компьютера с возможностью отображения текущей температуры воздуха в выбранном городе.</p>
+                <p>Основные возможности:</p>
+                <ul>
+                    <li>Мониторинг загрузки CPU и GPU</li>
+                    <li>Отслеживание температуры компонентов</li>
+                    <li>Отображение прогноза погоды</li>
+                    <li>Настройка пороговых значений для уведомлений</li>
+                </ul>
+                <div class="modal-tech">
+                    <span class="tech-tag">Python 3.6+</span>
+                    <span class="tech-tag">requests</span>
+                    <span class="tech-tag">psutil</span>
+                    <span class="tech-tag">GPUtil</span>
+                </div>
+                <div class="modal-links">
+                    <a href="#" class="demo"><i class="fas fa-external-link-alt"></i> Демо</a>
+                    <a href="#" class="code"><i class="fab fa-github"></i> Исходный код</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="passwordgenerator-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>PasswordGenerator</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1655720828012-58aecec2688f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Генератор паролей" class="modal-image">
+                <p>PasswordGenerator - это простой генератор паролей с графическим интерфейсом, созданный для безопасного и удобного создания сложных паролей.</p>
+                <p>Основные возможности:</p>
+                <ul>
+                    <li>Настройка длины пароля</li>
+                    <li>Выбор типов символов (буквы, цифры, спецсимволы)</li>
+                    <li>Автоматическое копирование в буфер обмена</li>
+                    <li>Оценка сложности пароля</li>
+                </ul>
+                <div class="modal-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Themed Tkinter (ttk)</span>
+                    <span class="tech-tag">pyperclip</span>
+                    <span class="tech-tag">random</span>
+                    <span class="tech-tag">ООП</span>
+                </div>
+                <div class="modal-links">
+                    <a href="#" class="demo"><i class="fas fa-external-link-alt"></i> Демо</a>
+                    <a href="#" class="code"><i class="fab fa-github"></i> Исходный код</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Политика конфиденциальности</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Здесь будет текст политики конфиденциальности...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Условия использования</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Здесь будут условия использования сайта...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
